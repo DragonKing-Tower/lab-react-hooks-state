@@ -1,14 +1,23 @@
-import React from 'react'
+import React from "react";
+import Button from "@mui/material/Button";
 
-const Cart = () => {
-  return (
-    <div>
-      <h2>Shopping Cart</h2>
+const Cart = ({ cartList, removeFromCart }) => {
+	return (
+		<div>
+			<h2>Shopping Cart</h2>
+			{/*  Display cart items dynamically */}
+			<p>{cartList.toString()}</p>
+			{/*  Remove items from cart */}
+			<Button
+				variant="contained"
+				onClick={() => {
+					removeFromCart();
+				}}
+			>
+				Remove Latest from Cart
+			</Button>
+		</div>
+	);
+};
 
-      {/* TODO: Display cart items dynamically */}
-      <p>The cart feature will be implemented here.</p>
-    </div>
-  )
-}
-
-export default Cart
+export default Cart;

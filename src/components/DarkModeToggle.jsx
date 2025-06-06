@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Button from "@mui/material/Button";
 
-const DarkModeToggle = () => {
-  // TODO: Implement dark mode toggle logic
+const DarkModeToggle = ({ toggler, currentMode }) => {
+	return (
+		<Button variant="contained" onClick={toggler}>
+			{currentMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+		</Button>
+	);
+};
 
-  return (
-    <button>Toggle Dark Mode {/* TODO: Update this text dynamically */}</button>
-  )
-}
-
-export default DarkModeToggle
+export default DarkModeToggle;
